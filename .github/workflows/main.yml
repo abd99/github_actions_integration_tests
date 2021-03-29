@@ -30,7 +30,5 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: ${{ matrix.flutter_version }}
-      - uses: ReactiveCircus/android-emulator-runner@v2.15.0
-        with:
-          api-level: 29
-          script: ./tool/flutter_ci_script.sh
+      - uses: faruktoptas/android-github-actions-emulator@1.1.0
+      - run: ./tool/flutter_ci_script.sh
