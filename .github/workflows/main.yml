@@ -33,4 +33,5 @@ jobs:
       - uses: ReactiveCircus/android-emulator-runner@v2.15.0
         with:
           api-level: 29
-          script: ./tool/flutter_ci_script.sh
+          script: ./gradlew connectedCheck
+      - run: ./tool/flutter_ci_script.sh
