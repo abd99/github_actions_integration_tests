@@ -36,4 +36,7 @@ jobs:
           api: 25
           tag: default
           abi: x86
+      - run: sdkmanager platform-tools
+      - run: adb devices
+      - run: echo $ANDROID_HOME
       - run: ./tool/flutter_ci_script.sh
