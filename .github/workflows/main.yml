@@ -32,7 +32,8 @@ jobs:
           channel: ${{ matrix.flutter_version }}
       - uses: malinskiy/action-android/emulator-run-cmd@release/0.1.1
         with:
-          api: 29
+          cmd: flutter doctor -v
+          api: 25
           tag: default
           abi: x86
       - run: ./tool/flutter_ci_script.sh
